@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql-statefulset
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: mysql # has to match .spec.template.metadata.labels
+  serviceName: mysql
+  replicas: 5 # by default is 1
+  template:
+    metadata:
+      labels:
+        app: mysql # has to match .spec.selector.matchLabels
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:latest
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: "your-root-password"
+          - name: MYSQL_DATABASE
+            value: "tower"
+          - name: MYSQL_USER
+            value: "tower"
+          - name: MYSQL_PASSWORD
+            value: "your-password"
+        ports:
+        - containerPort: 3306

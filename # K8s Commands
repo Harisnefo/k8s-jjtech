@@ -111,3 +111,45 @@ kubeconfig
 k config current-context #Display the current-context
 k config get-contexts # Describe one or many contexts
 k config use-context <name of context> #Set the current-context in a kubeconfig file
+
+
+git issue cannot write keep file0b.keep': Filename too long
+Run ----> git config --global core.longpaths true
+
+
+source <(kubectl completion bash) # set up autocomplete in bash into the current shell, bash-completion package should be installed first.
+echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permanently to your bash shell.
+
+
+
+
+
+velero install \
+    --provider aws \
+    --plugins velero/velero-plugin-for-aws:v1.0.1 \
+    --bucket velerobackup12\
+    --backup-location-config region=us-east-1 \
+    --snapshot-location-config region=us-east-1 \
+    --secret-file ~/.aws/credentials
+
+
+
+Add IAM User to EKS Cluster
+   https://antonputra.com/kubernetes/add-iam-user-and-iam-role-to-eks/#add-iam-user-to-eks-cluster 
+
+
+
+   ...
+  mapUsers: |
+    - userarn: arn:aws:iam::425018001744:user/developer
+      username: developer
+      groups: 
+      - reader
+...
+
+
+
+export AWS_PROFILE=netfox
+
+
+https://us02web.zoom.us/rec/share/4eZCvk9znX_H3-CHXvLQ3IMRnjxYhuqXJe__KZkur8EA9EHA4Vk4_4X-oRimU860._d_TSEl3ZCT2MwRA

@@ -42,3 +42,6 @@ Create a StorageClass, PersistentVolume, and PersistentVolumeClaim to define the
 ## https://kubernetes.io/docs/concepts/storage/volumes/#local # Volume config for hostpath
 ## https://kubernetes.io/docs/concepts/storage/persistent-volumes/  # For kubernetes PErsistent volumes
 ## https://kubernetes.io/docs/concepts/storage/storage-classes/#local # For storage classes
+
+
+fs-0c806014b866876ed
