@@ -27,7 +27,7 @@ spec:
               - key: class #<label-key>
                 operator: In
                 values:
-                  - tower  #<label-value>
+                  - host  #<label-value>
   containers:
     - name: nginx
       image: nginx
